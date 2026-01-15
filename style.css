@@ -36,3 +36,14 @@ p {
     backdrop-filter: blur(6px);
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+
+a {
+    color: #ffb6c1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #ffd6e7;
+}
+
