@@ -1,16 +1,38 @@
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
-text-align: center;
+    font-family: 'Lora', serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: pink;
+
+    /* Navy → purple → pink gradient */
+    background: linear-gradient(to bottom right, #001f3f, #4b0082, #ff69b4);
+    color: pink; /* default text color */
 }
 
+/* Heading style */
 h1 {
-    color: floralwhite;
+    color: #ffb6c1; /* soft light pink */
+    margin-top: 40px;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-
+/* Paragraph style */
 p {
-    color: navy;
+    color: #ffd6e7; /* very soft pink */
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.7;
+}
+
+/* Soft container with frosted-glass effect */
+.container {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 650px;
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
