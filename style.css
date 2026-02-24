@@ -1,11 +1,11 @@
 /* Base layout & typography */
 
 :root {
-    --color-navy: #000080; /* navy */
-    --color-light-pink: #ffc0cb; /* light pink */
-    --color-lavender: #e6e6fa; /* lavender */
-    --color-medium-purple: #9370db; /* medium purple */
-    --color-white: #ffffff; /* white */
+    --color-navy: #2a3c74; /* navy */
+    --color-light-pink: #f; /* light pink */
+    --color-lavender: #f0c3f9; /* lavender */
+    --color-medium-purple: #ebc7ff; /* medium purple */
+    --color-white: #94dfff; /* light blue */
 }
 
 *, *::before, *::after {
