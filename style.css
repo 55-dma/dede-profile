@@ -1,15 +1,13 @@
 /* Base layout & typography */
 
 :root {
-    --color-navy: #2a3c74; /* navy */
-    --color-light-pink: #ffe0f9; /* light pink */
-    --color-dark-pink: #ffc2f2; /* dark pink */
-    --color-lavender: #fae5ff; /* lavender */
-    --color-medium-purple: #f5ccff; /* medium purple */
-    --color-white: #94dfff; /* light blue */
+    --color-navy: #000080; /* navy */
+    --color-light-pink: #ffc0cb; /* light pink */
+    --color-lavender: #e6e6fa; /* lavender */
+    --color-medium-purple: #9370db; /* medium purple */
+    --color-white: #ffffff; /* white */
 }
 
-/* Reset and base styles */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -21,24 +19,10 @@ html {
 
 body {
     margin: 0;
-    background: radial-gradient(circle at top,#36005C 0%, #000080 40%, #000010 100%);
+    background-color: var(--color-navy);
     color: var(--color-light-pink);
     font-family: "Bookman Old Style", "Bookman", Libre Baskerville, serif;
     line-height: 1.6;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-}
-
-/*Starfield background*/
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.7), transparent 1px), radial-gradient(2px 2px at 80% 30%, rgba(255,204,212,0.8) transparent 1px), radial-gradient(2px 2px at 30px 70px, rgba(230,230,250,0.8), transparent 1px), radial-gradient(2px 2px at 60px 80px, rgba(255,255,255,0.6) transparent 1px);
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: -1;
 }
 
 /* Skip Link for keyboard users */
@@ -57,50 +41,6 @@ body::before {
     left: 0.5rem;
 }
 
-/* Layout */
-.site-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background: rgba(0, 0, 40, 0.8);
-    border-bottom: 1px solid rgba(230, 230, 250, 0.5);
-}
-
-.logo-area {
-max-width: 60%
-}
-
-.site-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: var(--color-lavender);
-    text-decoration: none;
-}
-
-nav {
-    margin-top: 0.5rem;
-}
-
-.nav-list a {
-color: var(--color-lavender);
-text-decoration: none;
-font-weight: bold;
-padding: 03rem 0.6rem;
-border-radius: 999px;
-}
-
-nav.list a:hover, nav .nav-list a:focus-visible {
-    background: var(--color-light-pink);
-    color: var(--color-navy);
-}
-
-nav .nav-list a[aria-current="page"] {
-    border: 1px solid var(--color-light-pink);
-}
-
-
 /* Layout containers */
 header{
     text-align: center;
@@ -110,12 +50,12 @@ header{
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 1.5rem 1rem 3rem;
+    padding: 1rem 1rem 3rem;
 }
 
 /* Headings */
 h1, h2, h3 {
-    color: var(--color-dark-pink);
+    color: var(--color-lavender);
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -123,7 +63,7 @@ h1, h2, h3 {
 /* Tagline style */
 .tagline {
     font-style: italic;
-    color: var(--color-light-blue);
+    color: var(--color-light);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -132,75 +72,15 @@ h1, h2, h3 {
 .section {
     margin-bottom: 2rem;
     padding: 1rem;
-    background: rgba(10, 10, 40, 0.7);
-    border-radius: 12px;
-    box-shadow: 0 0 18px rgba(147, 112, 219, 0.6);
-    border: 1px solid rgba(230, 230, 250, 0.7);
-    position: relative;
-    overflow: hidden;
-}
-
-.section::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    border: 1px solid rgba(255, 192, 203, 0.3);
-    opacity: 0;
-    animation: sectionGlow 4s ease-in-out infinite alternate;
-    pointer-events: none;
-}
-
-@keyframes sectionGlow {
-    from { opacity: 0.1; };
-    to { opacity: 0.6; };
-    }
-
-    /* Hero section with extra sparkle */
-    .hero {
-        text-align: left;
-    }
-
-    .hero-actions {
-     display: inline-flex;
-     flex-wrap: wrap;
-     gap: 0.75rem;
-     margin-top: 1rem;
-    }
-
-/* Buttons */
-.button {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 999px;
-    cursor: pointer;
-    border: none;
-}
-
-.button-primary {
-    background: var(--color-medium-purple);
-    color: var(--color-light-pink);
-    box-shadow: 0 0 12px rgba(147, 112, 219, 0.8);
-}
-
-.button-secondary {
-    background: transparent;
-    color: var(--color-light-pink);
-    border: 1px solid var(--color-light-pink);
-}
-
-.button:hover,
- .button:focus-visible {
-    background: var(--color-light-pink);
-    color: var(--color-navy);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* Links */
 a {
-    color: var(--color-dark-pink);
+    color: var(--color-medium-purple);
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -208,12 +88,6 @@ a:hover, a:focus {
     color: var(--color-light-pink);
     text-decoration: none;
 }
-
-a:focus-visible {
-    outline: 2px solid var(--color-light-pink);
-    outline-offset: 3px;
-}
-
 
 /* Lists */
 ul, ol {
@@ -226,25 +100,14 @@ ul, ol {
 footer {
     text-align: center;
     padding: 1rem;
-    background: rgba(0, 0, 40, 0.8);
-    color: var(--color-dark-lavender);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-lavender);
     font-size: 0.9rem;
     font-weight: bold;
     border-top: 1px solid var(--color-lavender);
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .logo-area {
-        max-width: 100%;
-        margin-bottom: 0.5rem;
-    }
-    .nav-list {
-        justify-content: flex-start;
-    }
-}
+
+
+
 
