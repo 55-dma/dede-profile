@@ -3,70 +3,96 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS file -->
-    <link rel="stylesheet" href="./style.css">
-
-    <!-- JavaScript file -->
-    <script src="./script.js"></script>
+    <title>Freelance Website Designer!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <!-- Outline of the webpage structure -->
-    <a href="#main" class="skip-link">Skip to main content</a>
-    <!-- Header -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header>
-        <h1>DeDe Andrews</h1>
-        <p class="tagline">Freelance Web Designer & Developer</p>
+    <div class="butterfly">
+        <div class="wing left"></div>
+        <div class="wing right"></div>
+    </div>
+
+    <div class="lanterns">
+        <div class="lantern l1"></div>
+        <div class="lantern l2"></div>
+        <div class="lantern l3"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="logo-area">
+            <a href="index.html" class="site-title">DeDe Andrews</a>
+            <p class="tagline">Freelance Website Designer!</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">DeDe Andrews</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-
-    <main id="main">
-        <section class="section" aria-labelledby="about-heading">
-            <h2 id="about-heading">ABOUT ME:</h2>
-            <p>Im a full-time student at Ivy Tech Community College going for my Software Development degree. I am very
-                creative & have a passion for designing websites...</p>
-        </section>
-
-        <section class="section" aria-labelledby="heading">
-            <h2 id="heading">MY SKILLS:</h2>
-            <p>I am DeDe Andrews, an independent freelance website designer with a passion for creating visually
-                appealing and user-friendly websites. With years of experience in web design, I specialize in crafting
-                custom solutions that meet the unique needs of my clients. Whether you're looking to build anew website
-                from scratch or revamp an existing one, I'm here to help bring your vision to life. Let's work together
-                to create a stunning online presence for your business or personal brand!
+    <main id="main-content">
+        <section class="section hero">
+            <h1>Freelance Web Designer</h1>
+            <p>
+                Welcome to my Portfolio -- a midnight sky of ideas, color, and creativity.
+                I design websites for people who are dreamers, creators, small businesses with wild hearts.
             </p>
+            <div class="hero-actions">
+                <a class="button primary" href="journey.html">View My Work</a>
+                <a class="button secondary" href="contact.html">Work With Me</a>
+            </div>
         </section>
 
-        <section class="section" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">PROJECTS:</h2>
-
+        <section class="section" aria-labelledby="services-heading">
+            <h2 id="services-heading">Sassy Style Solutions...</h2>
             <ul>
-                <li><strong>Project 1: Personal Portfolio Website</strong> - A responsive website showcasing my skills,
-                    projects, and contact information. Built using HTML, CSS, and JavaScript.</li>
-                <li><strong>Project 2: Blog Platform</strong> - A content management system for bloggers, allowing users
-                    to create, edit, and publish blog posts. Implemented with Django and PostgreSQL.</li>
+                <li>Custom websites that reflect your personality and brand.</li>
+                <li>Accessible designs that welcome everyone, on any device.</li>
+                <li>Clean, organized layouts that make information easy to find.</li>
+                <li>Magical touches of color, motion, and mood...without sacrificing usability.</li>
             </ul>
         </section>
 
-        <footer>
-            <p>Phone #: (317) 509-9407</p>
-            <p>Connect with me on: <strong><a href="https://linkedin.com/in/dottie-andrews-webdesigner"
-                        target="_blank">LinkedIn</a></strong></p>
-            <p>Email: <strong><a href="mailto: dedemandrews@gmail.com">dedemandrews@gmail.com</a></strong></p>
-        </footer>
-
+        <section Hclass="section" aria-labelledby="seo-heading">
+            <h2 id="seo-heading">SEO Strategies!</h2>
+            <p>
+                I blend creativity with strategy: clear headings, readable text, strong contrast with a friendly
+                structure.
+                Your site won't just look good -- it will be discoverable and easy to use.
+            </p>
+            <ul>
+                <li>Semantic HTML and proper heading structure.</li>
+                <li>Mobile-friendly layouts and responsive design.</li>
+                <li>Alt text, labels, and keyboard-friendly navigation.</li>
+                <li>Meta titles, descriptions, and keyword-aware content.</li>
+            </ul>
         </section>
 
+        <section class="section" aria-labelledby="links-heading">
+            <h2 id="links-heading">Technical Tools!</h2>
+            <p>Here are a few free tools & resources that I recommend for Everybody:</p>
+            <ul>
+                <li><a href="https://github.com/" target="_blank" rUel="noopener">GitHub</a></li>
+                <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></li>
+                <li><a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener">W3C Validators</a>
+                </li>
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2026 ~ DeDe Andrews/Freelance Website Designer</p>
+    </footer>
+
 </body>
 
 </html>
