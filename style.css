@@ -96,7 +96,7 @@ nav.list a:hover, nav .nav-list a:focus-visible {
     color: var(--color-navy);
 }
 
-nav .nav-list a[aria-current="page"] {
+nav.nav-list a[aria-current="page"] {
     border: 1px solid var(--color-light-pink);
 }
 
