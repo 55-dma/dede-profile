@@ -79,7 +79,7 @@ max-width: 60%
     text-decoration: none;
 }
 
-nav {
+.nav {
     margin-top: 0.5rem;
 }
 
@@ -91,12 +91,12 @@ padding: 03rem 0.6rem;
 border-radius: 999px;
 }
 
-nav.list a:hover, nav .nav-list a:focus-visible {
+.nav.list a:hover, nav .nav-list a:focus-visible {
     background: var(--color-light-pink);
     color: var(--color-navy);
 }
 
-nav.nav-list a[aria-current="page"] {
+.nav.nav-list a[aria-current="page"] {
     border: 1px solid var(--color-light-pink);
 }
 
