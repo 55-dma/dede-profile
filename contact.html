@@ -4,37 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeDe Andrews - Portfolio</title>
-    <meta name="description" content="Freelance Web Designer!">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS file -->
-    <link rel="stylesheet" href="./style.css">
-
-    <!-- JavaScript file -->
-    <script src="./script.js"></script>
+    <title>Freelance Website Designer!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
-<!-- Header -->
-<header class="site-header">
-    <h1>DeDe Andrews</h1>
-    <h3 class="tagline">Freelance Website Designer!</h3>
-</header>
-
 <body>
-    <div class="logo-area">
-        <a href="index.html" class="site-title">My
-            Portfolio Website</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <br>
+    <br>
+
+    <div class="butterfly">
+        <div class="wing left"></div>
+        <div class="wing right"></div>
     </div>
 
-    <nav aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li><a href="#index.html" aria-current="page">Home</a></li>
+    <div class="lanterns">
+        <div class="lantern l1"></div>
+        <div class="lantern l2"></div>
+        <div class="lantern l3"></div>
+    </div>
 
-            <li><a href="#about.html">About</a></li>
-            <li><a href="#journey.html">Journey</a></li>
-            <li><a href="#messages.html">Messages</a></li>
-            <li><a href="#contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <div class="logo-area">
+            <a href="index.html" class="site-title">DeDe Andrews
+            </a>
+            <p class="tagline">Portfolio</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <h1>Freelance Web Designer!</h1>
+        <p>
+            Welcome to my Portfolio -- a midnight sky of ideas, color, and creativity.
+            I design websites for people who are dreamers, creators, small businesses with wild hearts, like me.
+        </p>
+        <div class="hero-actions">
+            <a class="button primary" href="journey.html">View My Work</a>
+            <a class="button secondary" href="contact.html">Work With Me</a>
+        </div>
+
+        <section class="section" aria-labelledby="services-heading">
+            <h2 id="services-heading">Sassy Style Solutions...</h2>
+            <ul>
+                <li>Custom websites that reflect your personality and brand.</li>
+                <li>Accessible designs that welcome everyone, on any device.</li>
+                <li>Clean, organized layouts that make information easy to find.</li>
+                <li>Magical touches of color, motion, and mood...without sacrificing usability.</li>
+            </ul>
+        </section>
+        <section class="section" aria-labelledby="seo-heading">
+            <h2 id="seo-heading">SEO Strategies!</h2>
+            <p>
+                I blend creativity with strategy: clear headings, readable text, strong contrast with a friendly
+                structure.
+                Your site won't just look good -- it will be discoverable and easy to use.
+            </p>
+            <ul>
+                <li>Semantic HTML and proper heading structure.</li>
+                <li>Mobile-friendly layouts and responsive design.</li>
+                <li>Alt text, labels, and keyboard-friendly navigation.</li>
+                <li>Meta titles, descriptions, and keyword-aware content.</li>
+            </ul>
+        </section>
+
+        <section class="section" aria-labelledby="links-heading">
+            <h2 id="links-heading">Technical Tools...</h2>
+            <p>Here are a few free tools & resources that I recommend for Everybody:</p>
+            <ul>
+                <li><a href="https://github.com/" target="_blank" rUel="noopener">GitHub</a></li>
+                <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></li>
+                <li><a href="https://www.w3.org/developers/tools/" target="_blank" rel="noopener">W3C Validators</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 ~ DeDe Andrews/Freelance Website Designer</p>
+    </footer>
+
+</body>
+
+</html>
