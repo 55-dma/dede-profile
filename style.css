@@ -158,7 +158,7 @@ h1, h2, h3 {
 
     /* Hero section with extra sparkle */
     .hero {
-        text-align: left;
+        text-align: center;
     }
 
     .hero-actions {
