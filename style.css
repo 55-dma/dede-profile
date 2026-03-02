@@ -124,7 +124,7 @@ h1, h2, h3 {
 /* Tagline style */
 .tagline {
     font-style: italic;
-    color: var(--color-light-blue);
+    color: var(--color-dark-pink);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -182,15 +182,17 @@ h1, h2, h3 {
 }
 
 .button-primary {
-    background: var(--color-medium-purple);
-    color: var(--color-light-pink);
+    background: var(--color-dark-pink);
+    color: var(--color-navy);
+    text-align: center;
     box-shadow: 0 0 12px rgba(147, 112, 219, 0.8);
 }
 
 .button-secondary {
     background: transparent;
-    color: var(--color-light-pink);
-    border: 1px solid var(--color-light-pink);
+    color: var(--color-dark-pink);
+    text-align: center;
+    border: 2px solid var(--color-light-pink);
 }
 
 .button:hover,
@@ -228,10 +230,10 @@ footer {
     text-align: center;
     padding: 1rem;
     background: rgba(0, 0, 40, 0.8);
-    color: var(--color-dark-lavender);
+    color: var(--color-dark-pink);
     font-size: 0.9rem;
     font-weight: bold;
-    border-top: 1px solid var(--color-dark-pink);
+    border-top: 2px solid var(--color-dark-lavender);
 }
 
 /* Responsive */
