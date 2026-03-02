@@ -1,26 +1,35 @@
 document.documentElement.classList.add('js-enabled');
 
+//Reduced motion
 (function() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
         return;
     }
+
     const internalLinks = document.querySelectorAll('a[href^="#"]');
 
 internalLinks.forEach(link => {
         link.addEventListener('click', function(event) {
 
 const targetId = this.getAttribute('href').substring(1);
-const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                event.preventDefault();
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-                targetId.setAttribute('tabindex', '-1');
-targetId.focus();
-            }
-        });
-    });
+        if (!targetId) return;
+
+        const targetElement =
+        document.getElementById(targetId);
+        if (targetElement) {
+            event.preventDefault();
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.setAttribute('tabindex', '-1');
+            targetElement.focus({ preventScroll: true });
+            targetElement.addEventListener('blur', () => {
+                targetElement.removeAttribute('tabindex');
+            }, { once: true });
+        }
+            });
+         });
 })();
+
 
 //Pick a Card Message
 const messages = [
@@ -31,51 +40,65 @@ const messages = [
     "You have the power to achieve anything -- just set your mind to do it.",
 ];
 
-const pickCardBtn = document.getElementById('pull-card-btn');
+const pullCardBtn = document.getElementById('pull-card-btn');
 
-pickCardBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * messages.length);
-    (document.getElementById('message')).textContent = messages[randomIndex];
-});
+const cardMessage = documentElementById('pull-card=btn');
+
+if (pullCardBtn && cardMessage) {
+    pullCardBtn.addEventListener('click', () => {
+        const index = Math.floor(Math.random() * messages.length);
+        cardMessage.textContent = messages[index];
+    });
+}
 
 //Contact Form Validation
+
 const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
-const errorMessage = document.getElementById('error-message');
+const nameError = document.getElementById('name-error');
 
-contactForm.addEventListener('submit', function(event) {
-    let errors = [];
+const emailError = document.getElementById('email-error');
+const messageError = documen.getElementById('message-error');
+const successMessage = document.getElementById('form-success');
 
-    if (nameInput.value.trim() === '') {
-        errors.push('Name is required.');
-    }
 
-    if (emailInput.value.trim() === '') {
-        errors.push('Email is required.');
-    } else if (!validateEmail(emailInput.value.trim())) {
-        errors.push('Please enter a valid email address.');
-    }
+contactForm.addEventListener('submit', (event) => {
+    let valid = true;
+    successMessage.textContent = "";
 
-    if (messageInput.value.trim() === '') {
-        errors.push('Message is required.');
-    }
+    if (!nameInput.value.trim()) {
+        nameError.textContent = "Please enter your name."; valid = false;
+        } else {
+            nameError.textContent = "";
+        }
 
-    if (errors.length > 0) {
-        event.preventDefault();
-        errorMessage.textContent = errors.join(' ');
-        errorMessage.style.display = 'block';
-    } else {
-        errorMessage.style.display = 'none';
-    }
+  if (!enailInput.value.trim()) {
+        emailError.textContent = "Please enter a valid email address."; valid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+  if (!messageInput.value.trim()) {
+        messageError.textContent = "Please tell your ideas you have on your project."; valid = false;
+        } else {
+            messageError.textContent = "";
+        }
+
+  if (!valid) {
+    event.preventDefault();
+    return;
+  }
+
+event.preventDefault();
+successMessage.textContent = "Thank you!  Your message has been sent -- I look forward to talking with you!";
+contactForm.reset();
+
 });
 
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
 }
-
-
 
 
