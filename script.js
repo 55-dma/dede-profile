@@ -42,7 +42,7 @@ const messages = [
 
 const pullCardBtn = document.getElementById('pull-card-btn');
 
-const cardMessage = documentElementById('pull-card=btn');
+const cardMessage = document.getElementById('card-message');
 
 if (pullCardBtn && cardMessage) {
     pullCardBtn.addEventListener('click', () => {
@@ -62,9 +62,8 @@ const messageInput = document.getElementById('message');
 const nameError = document.getElementById('name-error');
 
 const emailError = document.getElementById('email-error');
-const messageError = documen.getElementById('message-error');
+const messageError = document.getElementById('message-error');
 const successMessage = document.getElementById('form-success');
-
 
 contactForm.addEventListener('submit', (event) => {
     let valid = true;
@@ -76,7 +75,7 @@ contactForm.addEventListener('submit', (event) => {
             nameError.textContent = "";
         }
 
-  if (!enailInput.value.trim()) {
+  if (!emailInput.value.trim()) {
         emailError.textContent = "Please enter a valid email address."; valid = false;
         } else {
             emailError.textContent = "";
