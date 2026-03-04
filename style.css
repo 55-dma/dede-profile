@@ -261,8 +261,8 @@ input, select, textarea {
     padding: 0.5rem;
     border-radius:  6px;
     border: 1px solid rgba(230, 230, 250, 0.7);
-    background: rgba(0, 0, 40, 0.8);
-    color: var(--color-dark-pink);
+    background: var(--color-dark-pink);
+    color: var(--color-navy);
     font-family: inherit;
     font-size: 1rem;
 }
@@ -270,20 +270,21 @@ input, select, textarea {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 2px solid var(--color-white);
+    outline: 2px solid var(--color-dark-pink);
     outline-offset: 2px;
 }
 
 .error-message {
-    color: var(--color-light-pink);
+    color: var(--color-dark-pink);
     font-size: 0.9rem;
     min-height: 1.1rem;
 }
 
 #form-success {
     margin-top: 0.75rem;
-    color: var(--color-lavender);
+    color: var(--color-dark-pink);
     font-style: italic;
+    font-size: large;
 }
 
 /*Footer*/
