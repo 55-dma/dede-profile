@@ -64,9 +64,20 @@ body::before {
     text-decoration: none;
 }
 
+/* Picture */
 
+.picture {
+    width: 275px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-
+.pic-area {
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 1rem;
+}
 
 /* Logo */
 .logo {
