@@ -283,8 +283,8 @@ textarea:focus-visible {
 #form-success {
     margin-top: 0.75rem;
     color: var(--color-dark-pink);
-    font-style: italic;
-    font-size: large;
+    font-style: bold;
+    font-size: larger;
 }
 
 /*Footer*/
