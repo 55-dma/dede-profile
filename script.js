@@ -82,7 +82,7 @@ contactForm.addEventListener('submit', (event) => {
         }
 
   if (!messageInput.value.trim()) {
-        messageError.textContent = "Please tell your ideas you have on your project."; valid = false;
+        messageError.textContent = "Please share your ideas you have on your project."; valid = false;
         } else {
             messageError.textContent = "";
         }
