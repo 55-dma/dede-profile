@@ -100,8 +100,14 @@ nav {
 }
 
 .nav-list {
-width: auto;
-max-width: none;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1.2rem;
+padding: 0;
+margin: 0;
+width: 100%;
+max-width: 250px;
 text-align: center;
  }
 
@@ -128,6 +134,7 @@ transition: 0.3s ease;
 /* Layout containers */
 header{
     text-align: center;
+    padding-top: 3rem;
     padding: 2rem 1rem 1rem;
 }
 
@@ -324,6 +331,12 @@ border-radius: 12px;
 box-shadow: 0 0 18px rgba(147, 112, 219, 0.6);
 border: 2px solid rgba(230,230,250,0.7);
 overflow: visible;
+}
+
+.section ul, .section ol {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 /* Responsive */
