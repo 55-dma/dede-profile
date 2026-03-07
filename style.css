@@ -291,7 +291,6 @@ thead {
 }
 
 label {
-    background-color: var(--color-navy);
     display: block;
     margin-bottom: 0.25rem;
     color: var(--color-dark-pink);
@@ -311,7 +310,7 @@ label {
 .input:focus-visible,
 .select:focus-visible,
 .textarea:focus-visible {
-    outline: 2px solid var(--color-dark-pink);
+    outline: 2px solid var(--color-light-pink);
     outline-offset: 2px;
 }
 
