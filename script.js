@@ -30,14 +30,34 @@ const targetId = this.getAttribute('href').substring(1);
          });
 })();
 
+//Audio & Button
+const audio = document.getElementById("welcomeAudio");
+const button = document.getElementById("audioToggle");
+
+button.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        button.textContent = "⏸ Pause Audio";
+        button.setAttribute("aria-label", "Pause welcome audio");
+    } else {
+        audio.pause();
+        button.textContent = "▶ Play Audio";
+        button.setAttribute("aria-label", "Play welcome audio");
+    };
+
 
 //Pick a Card Message
 const messages = [
-    "Freedom is the essence of the soul -- never let it fade.",
-    "In every challenge lies the seed of opportunity -- let it grow.",
-    "You are a shining star that illuminates the world -- with your brilliance.",
-    "Life is a journey -- wander through it with an open heart.",
-    "You have the power to achieve anything -- just set your mind to do it.",
+    "📝 Freedom is the essence of the soul ~ never let it Fade.",
+    "📝 In every challenge lies the seed of opportunity ~ let it Grow.",
+    "📝 You are a shining star that brights the world ~ just being in It.",
+    "📝 Life is a journey ~ wander through it with an open Heart.",
+    "📝 You have the power to achieve anything ~ just set your mind to Do It.",
+    "📝 Life at times is a struggle...always remember ~ This too shall Pass.",
+    "📝 Celebrate the beauty of your life ~ in every Moment.",
+    "📝 Dance to the rhythm ~ of your own beating Heart.",
+    "📝 The stars are your guide ~ follow their Light.",
+    "📝 My FAVORITE ~ Bloom...Wherever You Are Planted!",
 ];
 
 const pullCardBtn = document.getElementById('pull-card-btn');

@@ -84,17 +84,28 @@ body::before {
     height: auto;
     display: block;
     margin: 0 auto;
+    max-width: 90%;
+    animation: floatLogo 6s ease-in-out infinite;
 }
 
 .logo-area {
-    text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         max-width: 100%;
         margin-bottom: 1rem;
     }
 
 .logo-area .tagline {
     margin-top: 1rem;
-    text-align: center;
+    text-align: center; 
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8); }
+    100% { transform: translateY(0); }
 }
 
 /* Navigation */
@@ -218,6 +229,24 @@ h1, h2, h3 {
     color: var(--color-navy);
 }
 
+
+/* Auto Player */
+.audio-player {
+    position: absolute;
+    top: 180px;
+    right: 20px;
+    background: rgba(0,0,40, 0.6);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(147, 112, 219, 0.6);
+}
+
+.auto-transcript {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: var(--color-dark-pink);
+}
+
 /* Links */
 a {
     color: var(--color-dark-pink);
@@ -301,6 +330,25 @@ textarea:focus-visible {
     font-size: larger;
 }
 
+form button, form input[type="submit"] {
+    background-color: var(--color-dark-pink);
+    color: var(--color-navy);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 03s ease;
+}
+
+form button:hover,
+form input[type="submit"]:hover,
+form button:focus-visible,
+form input[type="submit"]:focus-visible {
+    background-color: #ff7ac8;
+    color: navy;
+    }
+
 /*Footer*/
 footer {
     position: relative;
@@ -358,6 +406,11 @@ overflow: visible;
     .nav-list a {
             padding: 0.5rem 1rem;
             font-size: 1rem;
+    }
+
+    @media {
+        .logo
+            max-width: 75%;
     }
 
 }

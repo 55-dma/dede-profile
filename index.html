@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freelance Website Designer -- Creating accessible, creative, user-friendly websites.">
     <title>Freelance Website Designer | Portfolio</title>
-    <meta name="description" content="Freelance website designer creating accessible, creative, user-friendly websites.">
+  
     <link rel="stylesheet" href="style.css">
-</head>
+    </head>
+
 <body>
 
     <a href="#main-content" class="skip-link">🎼  Skip to Main Content</a>
@@ -31,7 +33,22 @@
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
+
+        <div class="audio-player" role="region" aria-label="Site welcome audio"></div>
+        <audio id="welcomeAudio" autoplay>
+        <source src="Website Welcome Page - Audio Clip.mp3" type="audio/mpeg">Your browser does not support the audio element.
+        </audio>
+
+             <p class="audio-transcript">
+        <strong>Transcript:</strong> Welcome to Dottaskic.Designs.  Explore my projects, services, and creative journey.
+    </p>
+    </div>
+
+    <button id="audioToggle" aria-controls="welcomeAudio" aria-label="Pause welcome audio">
+        ⏸ Pause Audio
+    </button>
+
         <section class="section">
         <h1>Freelance Website Designer</h1>
             <p>Welcome to my Portfolio -- a midnight sky of ideas, color, and creativity.
@@ -82,12 +99,13 @@
         </section>
     </main>
 
-    <footer>
-
-    <p>2026 © ~ DeDe Andrews 🌺 Freelance Website Designer</p>
-        
+<footer>
+    <p role="contentinfo">2026 © ~ DeDe Andrews 🌺 Freelance Website Designer</p>
 </footer>
+
 <script src="script.js"></script>
+
+
 </body>
 
 </html>
