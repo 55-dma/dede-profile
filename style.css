@@ -218,7 +218,7 @@ h1, h2, h3 {
 .button {
     display: inline-block;
     padding: 0.6rem 1.2rem;
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: none;
     text-align: center;
     border-radius: 999px;
@@ -246,7 +246,7 @@ h1, h2, h3 {
 /* Links */
 a {
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 a:hover, a:focus {
@@ -290,7 +290,7 @@ thead {
 
 label {
     display: block;
-    }
+}
 
 .input, select, textarea {
     width: 100%;
@@ -307,8 +307,7 @@ label {
 .textarea:focus-visible {
     outline: 2px solid var(--color-light-pink);
     outline-offset: 2px;
-    background-color: var(--color-dark-pink);
-}
+    }
 
 .error-message {
     color: var(--color-dark-pink);
