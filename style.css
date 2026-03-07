@@ -83,6 +83,7 @@ body::before {
     position: relative;
     top: 180px;
     left: 80px;
+    text-align: right;
     background: rgba(--color-dark-pink);
     padding: 1rem;
     border-radius: 12px;
