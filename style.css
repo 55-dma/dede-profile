@@ -229,11 +229,13 @@ h1, h2, h3 {
 }
 
 .button-primary {
+    color: var(--color-navy);
     text-align: center;
     box-shadow: 0 0 12px rgba(147, 112, 219, 0.8);
 }
 
 .button-secondary {
+    color: var(--color-navy);
     text-align: center;
     border: 2px solid var(--color-lavender);
 }
@@ -245,7 +247,7 @@ h1, h2, h3 {
 
 /* Links */
 a {
-    color: var(--color-navy);
+    color: var(--color-dark-pink);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -292,7 +294,6 @@ thead {
 
 label {
     display: block;
-    background-color: var(--color-dark-pink);
     }
 
 .input, select, textarea {
@@ -320,7 +321,7 @@ label {
 
 #form-success {
     margin-top: 0.75rem;
-    font-style: bolder;
+    font-style: bold;
     font-size: larger;
 }
 
@@ -329,7 +330,7 @@ form button, form input[type="submit"] {
     color: var(--color-navy);
     padding: 0.6rem 1.2rem;
     border-radius: 999px;
-    font-weight: bolder;
+    font-weight: bold;
     cursor: pointer;
     transition: 03s ease;
 }
