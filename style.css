@@ -295,6 +295,7 @@ thead {
 
 label {
     display: block;
+    background-color: var(--color-dark-pink);
 }
 
 .input, select, textarea {
