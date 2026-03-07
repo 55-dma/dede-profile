@@ -80,7 +80,7 @@ body::before {
 
 /* Auto Player */
 .audio-player {
-    position: absolute;
+    position: relative;
     top: 180px;
     left: 80px;
     background: rgba(--color-dark-pink);
