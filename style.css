@@ -216,6 +216,7 @@ h1, h2, h3 {
 
 /* Buttons */
 .button {
+    background-color: var(--color-dark-pink);
     color: var(--color-navy);
     display: inline-block;
     padding: 0.6rem 1.2rem;
@@ -228,12 +229,14 @@ h1, h2, h3 {
 }
 
 .button-primary {
+    background-color: var(--color-dark-pink);
     color: var(--color-navy);
     text-align: center;
     box-shadow: 0 0 12px rgba(147, 112, 219, 0.8);
 }
 
 .button-secondary {
+    background-color: var(--color-dark-pink);
     color: var(--color-navy);
     text-align: center;
     border: 2px solid var(--color-lavender);
@@ -241,7 +244,6 @@ h1, h2, h3 {
 
 .button:hover,
  .button:focus-visible {
-    background: var(--color-dark-pink);
     color: var(--color-navy);
 }
 
@@ -288,6 +290,8 @@ thead {
 
 /* Forms */
 .form-group {
+    background-color: var(--color-dark-pink);
+    color: var(--color-dark-pink);
     margin-bottom: 0.5rem;
 }
 
