@@ -293,7 +293,6 @@ thead {
 
 label {
     display: block;
-    background-color: var(--color-navy);
     }
 
 .input, select, textarea {
