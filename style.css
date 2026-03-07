@@ -289,7 +289,6 @@ thead {
 .form-group {
     margin-bottom: 1rem;
     color: var(--color-dark-pink);
-    background-color: var(--color-dark-pink);
 }
 
 label {
@@ -297,6 +296,7 @@ label {
     }
 
 .input, select, textarea {
+    background-color: var(--color-dark-pink);
     width: 100%;
     padding: 0.5rem;
     border-radius:  6px;
