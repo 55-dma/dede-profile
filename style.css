@@ -315,7 +315,7 @@ label {
 }
 
 .error-message {
-    color: var(--color-navy);
+    color: var(--color-dark-pink);
     font-size: 0.9rem;
     min-height: 1.1rem;
 }
@@ -328,8 +328,6 @@ label {
 }
 
 form button, form input[type="submit"] {
-    background-color: var(--color-dark-pink);
-    color: var(--color-navy);
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 999px;
@@ -342,8 +340,8 @@ form button:hover,
 form input[type="submit"]:hover,
 form button:focus-visible,
 form input[type="submit"]:focus-visible {
-    background-color: var(--color-navy);
-    color: var(--color-dark-pink);
+    background-color: var(--color-dark-pink);
+    color: var(--color-navy);
     }
 
 /*Footer*/
