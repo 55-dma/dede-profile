@@ -328,6 +328,7 @@ label {
 
 form button, form input[type="submit"] {
     border: none;
+    background-color: var(--color-dark-pink);
     color: var(--color-navy);
     padding: 0.6rem 1.2rem;
     border-radius: 999px;
