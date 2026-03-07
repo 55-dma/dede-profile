@@ -338,6 +338,7 @@ form button:hover,
 form input[type="submit"]:hover,
 form button:focus-visible,
 form input[type="submit"]:focus-visible {
+    background-color: var(--color-dark-pink);
     color: var(--color-navy);
     }
 
