@@ -216,6 +216,7 @@ h1, h2, h3 {
 
 /* Buttons */
 .button {
+    background-color: var(--color-dark-pink);
     display: inline-block;
     padding: 0.6rem 1.2rem;
     font-weight: bolder;
