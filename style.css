@@ -216,7 +216,6 @@ h1, h2, h3 {
 
 /* Buttons */
 .button {
-    background-color: var(--color-dark-pink);
     display: inline-block;
     padding: 0.6rem 1.2rem;
     font-weight: bold;
@@ -246,7 +245,6 @@ h1, h2, h3 {
 
 /* Links */
 a {
-    color: var(--color-dark-pink);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -288,7 +286,6 @@ thead {
 /* Forms */
 .form-group {
     margin-bottom: 1rem;
-    color: var(--color-dark-pink);
 }
 
 label {
@@ -321,7 +318,7 @@ label {
 
 #form-success {
     margin-top: 0.75rem;
-    font-style: bold;
+    font-style: bolder;
     font-size: larger;
 }
 
@@ -330,7 +327,7 @@ form button, form input[type="submit"] {
     color: var(--color-navy);
     padding: 0.6rem 1.2rem;
     border-radius: 999px;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
     transition: 03s ease;
 }
