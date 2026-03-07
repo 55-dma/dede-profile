@@ -293,7 +293,7 @@ thead {
 label {
     display: block;
     margin-bottom: 0.25rem;
-    color: var(--color-dark-pink);
+    color: var(--color-navy);
 }
 
 .input, select, textarea {
