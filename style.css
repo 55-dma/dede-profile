@@ -47,18 +47,18 @@ body::before {
 /* Skip Link */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 0;
     background: var(--color-dark-pink);
     color: var(--color-navy);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     border-radius: 0 0 8px 0;
     transition: top 0.3s ease;
     z-index: 9999;
 }
 
 .skip-link:focus {
-    top: 10px;
+    top: 80px;
 }
 
 /* Header */
@@ -82,7 +82,7 @@ body::before {
 /* Audio Player */
 .audio-player {
     position: absolute;
-    top: 180px;
+    top: 220px;
     right: 20px;
     left: auto;
     background: rgba(255,255,255,0.15);
