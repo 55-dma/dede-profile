@@ -117,23 +117,6 @@ body::before {
     z-index: 10000;
 }
 
-/* Skip Link */
-.skip-link {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    background: var(--color-dark-pink);
-    color: var(--color-navy);
-    padding: 0.6rem 1rem;
-    border-radius: 0 0 8px 0;
-    transition: top 0.3s ease;
-    z-index: 9999;
-}
-
-.skip-link:focus {
-    top: 400px;
-}
-
 /* Navigation */
 nav {
     width: 100%;
@@ -323,7 +306,7 @@ textarea:focus-visible {
 
 #form-success {
     margin-top: 0.75rem;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: larger;
 }
 
