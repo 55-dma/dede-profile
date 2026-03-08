@@ -80,13 +80,14 @@ body::before {
 
 /* Auto Player */
 .audio-player {
-    position: relative;
+    position: absolute;
     top: 180px;
-    left: 40px;
+    left: 20px;
     background: rgba(v--color-dark-pink);
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(--color-dark-pink);
+    z-index: 9999;
 }
 
 .auto-transcript {
