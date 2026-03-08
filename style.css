@@ -1,15 +1,14 @@
 /* Base layout & typography */
-
 :root {
-    --color-navy: #2a3c74; /* navy */
-    --color-light-pink: #ffe0f9; /* light pink */
-    --color-dark-pink: #ffc2f2; /* dark pink */
-    --color-lavender: #fae5ff; /* lavender */
-    --color-medium-purple: #f5ccff; /* medium purple */
-    --color-white: #94dfff; /* light blue */
+    --color-navy: #2a3c74;
+    --color-light-pink: #ffe0f9;
+    --color-dark-pink: #ffc2f2;
+    --color-lavender: #fae5ff;
+    --color-medium-purple: #f5ccff;
+    --color-white: #94dfff;
 }
 
-/* Reset and base styles */
+/* Reset */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -30,42 +29,42 @@ body {
     overflow-x: hidden;
 }
 
-/*Starfield background*/
+/* Starfield */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.7), 
-    transparent 1px), radial-gradient(2px 2px at 80% 30%, rgba(255,204,212,0.8) transparent 1px), 
-    radial-gradient(2px 2px at 30px 70px, rgba(230,230,250,0.8), transparent 1px), 
-    radial-gradient(2px 2px at 60px 80px, rgba(255,255,255,0.6) transparent 1px);
+    background:
+        radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.7), transparent 1px),
+        radial-gradient(2px 2px at 80% 30%, rgba(255,204,212,0.8), transparent 1px),
+        radial-gradient(2px 2px at 30px 70px, rgba(230,230,250,0.8), transparent 1px),
+        radial-gradient(2px 2px at 60px 80px, rgba(255,255,255,0.6), transparent 1px);
     opacity: 0.5;
     pointer-events: none;
     z-index: -1;
 }
 
-/* Skip Link for keyboard users */
+/* Skip Link */
 .skip-link {
+    position: absolute;
     top: -50px;
     left: 0;
     background: var(--color-medium-purple);
     color: var(--color-navy);
+    padding: 0.5rem;
+    z-index: 9999;
 }
 
-/* Layout */
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Header */
 .site-header {
     text-align: center;
 }
 
-.site-title {
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: var(--color-dark-pink);
-    text-decoration: none;
-}
-
 /* Picture */
-
 .picture {
     width: 275px;
     height: auto;
@@ -78,15 +77,15 @@ body::before {
     margin-bottom: 1rem;
 }
 
-/* Auto Player */
+/* Audio Player */
 .audio-player {
     position: absolute;
     top: 180px;
     left: 20px;
-    background: rgba(v--color-dark-pink);
+    background: rgba(255,255,255,0.15);
     padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 0 12px rgba(--color-dark-pink);
+    box-shadow: 0 0 12px var(--color-dark-pink);
     z-index: 9999;
 }
 
@@ -94,6 +93,12 @@ body::before {
     font-size: 0.8rem;
     margin-top: 0.5rem;
     color: var(--color-dark-pink);
+}
+
+#audioToggle {
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
 }
 
 /* Logo */
@@ -113,16 +118,16 @@ body::before {
     justify-content: center;
     max-width: 100%;
     margin-bottom: 1rem;
-    }
+}
 
 .logo-area .tagline {
     margin-top: 1rem;
-    text-align: center; 
+    text-align: center;
 }
 
 @keyframes floatLogo {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-8); }
+    50% { transform: translateY(-8px); }
     100% { transform: translateY(0); }
 }
 
@@ -144,14 +149,14 @@ nav {
     margin: 0;
 }
 
-.nav-list {
+.nav-list a {
     color: var(--color-dark-pink);
     text-decoration: none;
     font-weight: bold;
     padding: 0.4rem 0.8rem;
     border-radius: 999px;
     background: rgba(255,255,255,0.1);
-    transform: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .nav-list a:hover,
@@ -164,8 +169,8 @@ nav {
     border: 4px solid var(--color-dark-pink);
 }
 
-/* Layout containers */
-header{
+/* Layout */
+header {
     text-align: center;
     padding: 1.5rem 1rem;
     padding-top: 3rem;
@@ -187,7 +192,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* Tagline style */
+/* Tagline */
 .tagline {
     font-style: italic;
     font-size: 24px;
@@ -196,24 +201,6 @@ h1, h2, h3 {
     text-align: center;
     margin: 0.25rem 0 0;
 }
-
-@keyframes sectionGlow {
-    from { opacity: 0.1; }
-    to { opacity: 0.6; }
-    }
-
-    /* Hero section  */
-    .hero {
-        text-align: center;
-    }
-
-    .hero-actions {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 2rem;
-     margin-top: 2rem;
-    }
 
 /* Buttons */
 .button {
@@ -230,22 +217,20 @@ h1, h2, h3 {
 
 .button-primary {
     background-color: var(--color-dark-pink);
-    color: var(--color-dark-pink);
-    text-align: center;
+    color: var(--color-navy);
     box-shadow: 0 0 12px rgba(147, 112, 219, 0.8);
 }
 
 .button-secondary {
     background-color: var(--color-dark-pink);
-    color: var(--color-dark-pink);
-    text-align: center;
+    color: var(--color-navy);
     border: 2px solid var(--color-lavender);
 }
 
 .button:hover,
- .button:focus-visible {
+.button:focus-visible {
     color: var(--color-navy);
-    }
+}
 
 /* Links */
 a {
@@ -270,7 +255,7 @@ ul, ol {
     padding-left: 1.5rem;
 }
 
-/*Table*/
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -290,29 +275,29 @@ thead {
 /* Forms */
 .form-group {
     margin-bottom: 1rem;
-    }
+}
 
 label {
     display: block;
-    }
+}
 
-.input, select, textarea {
+input, select, textarea {
     background-color: var(--color-dark-pink);
     width: 100%;
     padding: 0.5rem;
-    border-radius:  6px;
+    border-radius: 6px;
     border: 1px solid rgba(230, 230, 250, 0.7);
     color: var(--color-navy);
     font-family: inherit;
     font-size: 1rem;
 }
 
-.input:focus-visible,
-.select:focus-visible,
-.textarea:focus-visible {
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
     outline: 2px solid var(--color-light-pink);
     outline-offset: 2px;
-    }
+}
 
 .error-message {
     color: var(--color-dark-pink);
@@ -322,30 +307,13 @@ label {
 
 #form-success {
     margin-top: 0.75rem;
-    font-style: bolder;
+    font-weight: bold;
     font-size: larger;
 }
 
-form button, form input[type="submit"] {
-    border: none;
-    color: var(--color-navy);
-    padding: 0.6rem 1.2rem;
-    border-radius: 999px;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: 03s ease;
-}
-
-form button:hover,
-form input[type="submit"]:hover,
-form button:focus-visible,
-form input[type="submit"]:focus-visible {
-    color: var(--color-navy);
-}
-
-.submit-btn {
-    background-color: var(--color-dark-pink);
-    color: navy;
+/* Default form button */
+form button,
+form input[type="submit"] {
     border: none;
     padding: 0.6rem 1.2rem;
     border-radius: 999px;
@@ -354,12 +322,18 @@ form input[type="submit"]:focus-visible {
     transition: 0.3s ease;
 }
 
+/* Submit button override */
+.submit-btn {
+    background-color: var(--color-dark-pink);
+    color: navy;
+}
+
 .submit-btn:hover,
 .submit-btn:focus-visible {
     background-color: #ff7ac8;
 }
 
-/*Footer*/
+/* Footer */
 footer {
     position: relative;
     text-align: center;
@@ -369,61 +343,42 @@ footer {
     padding: 1rem 0;
 }
 
-.site-header,
-nav, footer {
-    width: 100%;
-    max-width: 100%;
-}
-
 .section {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: rgba(10,10, 40, 0.7);
+    background: rgba(10,10,40,0.7);
     border-radius: 12px;
-    box-shadow: 0 0 18px rgba(147, 112, 219, 0.6);
+    box-shadow: 0 0 18px rgba(147,112,219,0.6);
     border: 2px solid rgba(230,230,250,0.7);
-    overflow: visible;
-}
-
-.section ul, .section ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 /* Responsive */
 @media (max-width: 700px) {
     .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
 
-@media (max-width: 700px) {
     nav {
-    width: 100%;
+        width: 100%;
     }
-}
-    @media (max-width: 700px) {
+
     .nav-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
     }
-}
 
-    @media (max-width: 700px) {
     .nav-list a {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
     }
 
-    @media {
-    .logo
-    max-width: 75%;
+    .logo {
+        max-width: 75%;
     }
-
 }
+
 
 
 
