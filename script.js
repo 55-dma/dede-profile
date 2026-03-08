@@ -123,4 +123,20 @@ contactForm.reset();
 
 }
 
+// CONTACT FORM HANDLING
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const success = document.getElementById("form-success");
+
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // stop page reload
+
+            success.textContent = "🌸 Your message has been sent successfully!";
+            success.style.color = "var(--color-dark-pink)";
+
+            form.reset();
+        });
+    }
+});
 
