@@ -239,9 +239,13 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     text-align: center;
-    min-width: 220px;
     gap: 3rem;
     margin-top: 2rem;
+}
+
+.hero-actions a {
+    min-width: 220px;
+    text-align: center;
 }
 
 /* Links */
